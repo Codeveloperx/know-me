@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 
 const TITLE = "Portfolio";
+const NOT_FOUND= "Not Found";
 
 const titles: Record<string, string> = {
   "/": "Home",
@@ -14,7 +15,7 @@ const useTiltlePage = () => {
 
   useEffect(() => {
     const key = location.pathname;
-    const title = titles[key as keyof typeof titles] ?? "Not Found";
+    const title = titles[key as keyof typeof titles] ?? NOT_FOUND;
 
     document.title = `${TITLE} | ${title}`;
   }, [location.pathname]);
