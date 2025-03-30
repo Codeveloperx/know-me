@@ -6,7 +6,11 @@ const AppRoutes = () => {
 
   return (
     <Routes>
-      <Route index path="/" element={<h1>Know me!!</h1>} />
+      <Route
+        index
+        path="/"
+        element={<h1 className="text-3xl font-bold underline">Know me!</h1>}
+      />
       <Route path="/about" element={<h1>About me!!</h1>} />
       <Route path="/projects" element={<h1>Projects!!</h1>} />
       <Route path="*" element={<h1>Ruta no encontrada!!</h1>} />
